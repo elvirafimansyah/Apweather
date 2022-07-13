@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" >
   <script>
     tailwind.config = {
       theme: {
@@ -24,7 +25,8 @@
             'lime': "#28E13B",
             'light-navy': "#152350",
             'low-navy': "#212E59",
-            'light-gray': "#BFBFBF"
+            'light-gray': "#BFBFBF",
+            "half-white": "#EEEEEE"
           }
         }
       }
@@ -50,8 +52,8 @@
       </nav>
       <!-- End Nav -->
       <main class="py-3 flex flex-col lg:block max-w-md" >
-        <div class="search-bar h-12" style="width: 26.5rem">
-          <input type="text" class="w-full h-full bg-light-navy rounded-lg px-12 bg-no-repeat text-light-gray focus:outline-none" placeholder="Search Location" style="background-image: url(./src/img/search.png); background-size: 1.5em; background-position: 16px 48%">
+        <div class="search-bar h-12" >
+          <input type="text" class="w-full h-full bg-light-navy rounded-lg px-12 bg-no-repeat text-light-gray focus:outline-none" placeholder="Search Location" style="background-image: url(./src/img/search.png); background-size: 1.5em; background-position: 16px 48%; ">
         </div>
         <div id="main_example_card " class="py-4 flex flex-wrap">
 
@@ -120,8 +122,6 @@
             </div>
           </div>
 
-
-
         </div>
       </main>
     </div>
@@ -138,14 +138,70 @@
           </svg>
         </a>
       </nav>
-      <main class="py-10">
-        <h3 class="text-white text-2xl">Weather <span class="text-lime font-medium">Forecast</span></h3>
+      <main class="py-10 ">
+        <h3 class="text-white text-2xl ">Weather <span class="text-lime font-medium">Forecast</span></h3>
+        <!-- Card Details -->
+        <div class="card-details p-9 text-white rounded-lg my-5" style="background-image: url(src/img/card_details.png); background-size:cover; ">
+          <div class="row-1 day flex justify-between items-center pb-5">
+            <h3 class="text-xl font-medium">Today</h3>
+            <h3 class="font-light">13/07/22 11.00</h3>
+          </div>
+          <div class="row-2 specifc flex justify-between items-center pb-5">
+            <div class="text-info">
+              <h3 class="text-4xl font-semibold ">30<span class="text-lime ">°C</span></h3>
+              <p class="text-half-white text-lg">Partly Cloudly</p>
+            </div>
+            <img src="https://cdn.weatherapi.com/weather/64x64/night/116.png" width="100" alt="partly cloudly">
+          </div>
+          <div class="row-3 location flex text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#28E13B" class="bi bi-geo-alt-fill"
+              viewBox="0 0 16 16">
+              <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+            </svg>
+            &nbsp; 
+            New York, USA
+          </div>
+        </div>
+        <!-- End Card Details -->
+        <h3 class="text-white text-xl pb-5">Today Overview</h3>
+
+        <div class="box-details flex flex-wrap w-full">
+          <div class="box bg-low-navy p-7 mr-5 mb-5 flex justify-center items-center rounded-lg">
+            <img src="src/img/wind.png" width="38" height="38" alt="wind">
+            <div class="text pl-3.5">
+              <p class="text-light-gray font-light text-sm">Wind Speed</p>
+              <h3 class="text-white font-semibold text-2xl">9.4/mph</h3>
+            </div>
+          </div>
+          <div class="box bg-low-navy p-7 mr-5 mb-5 flex justify-center items-center rounded-lg">
+            <img src="src/img/waves.png" width="38" height="38" alt="wind">
+            <div class="text pl-3.5">
+              <p class="text-light-gray font-light text-sm">Pressure</p>
+              <h3 class="text-white font-semibold text-2xl">9.4/mph</h3>
+            </div>
+          </div>
+          <div class="box bg-low-navy p-7 mr-5 mb-5 flex justify-center items-center rounded-lg">
+            <img src="src/img/temp.png" width="38" height="38" alt="wind">
+            <div class="text pl-3.5">
+              <p class="text-light-gray font-light text-sm">Feels Like</p>
+              <h3 class="text-white font-semibold text-2xl">9.4/mph</h3>
+            </div>
+          </div>
+          <div class="box bg-low-navy p-7 mr-5 mb-5 flex justify-center items-center rounded-lg">
+            <img src="src/img/uv.png" width="38" height="38" alt="wind">
+            <div class="text pl-3.5">
+              <p class="text-light-gray font-light text-sm">UV Index</p>
+              <h3 class="text-white font-semibold text-2xl">9.4/mph</h3>
+            </div>
+          </div>
+        </div>
       </main>
       <!-- End Navbar -->
       <!-- Main -->
       <!-- End Main -->
     </div>
     <!-- End Right Side -->
+    <script src="src/js/main.js"></script>
   </div>
 </body>
 </html>
