@@ -23,7 +23,8 @@
             'navy': '#09153E',
             'lime': "#28E13B",
             'light-navy': "#152350",
-            'low_navy': "#212E59"
+            'low-navy': "#212E59",
+            'light-gray': "#BFBFBF"
           }
         }
       }
@@ -31,25 +32,120 @@
   </script>
 </head>
 <body class="font-body">
-  <div class="flex flex-col lg:flex-row h-screen">
-    <div class="left-side bg-navy w-full lg:w-1/2  px-4 lg:px-20">
-      <div class="py-6">
+  <div class="flex flex-col lg:flex-row h-full">
+    <!-- Left Side -->
+    <div class="left-side bg-navy w-full lg:w-1/2  px-4 lg:px-28">
+      <!-- Nav -->
+      <nav class="py-7 flex justify-between lg:block">
         <a href="#" class=" text-xl font-semibold whitespace-nowrap text-white">
           Ap<span class="text-lime">weather</span>
         </a>
-      </div>
-    </div>
-    <div class="right-side bg-light-navy w-1/2 container mx-auto px-4 lg:px-20 ">
-      <div class=" py-6 float-right">
-        <a href="https://github.com/elvirafimansyah/WeatherApp" class="text-xl font-semibold whitespace-nowrap text-white">
+        <a href="https://github.com/elvirafimansyah/WeatherApp" target="_blank" class="text-xl font-semibold whitespace-nowrap text-white lg:hidden">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github"
             viewBox="0 0 16 16">
             <path
               d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
           </svg>
         </a>
-      </div>
+      </nav>
+      <!-- End Nav -->
+      <main class="py-3 flex flex-col lg:block max-w-md" >
+        <div class="search-bar h-12" style="width: 26.5rem">
+          <input type="text" class="w-full h-full bg-light-navy rounded-lg px-12 bg-no-repeat text-light-gray focus:outline-none" placeholder="Search Location" style="background-image: url(./src/img/search.png); background-size: 1.5em; background-position: 16px 48%">
+        </div>
+        <div id="main_example_card " class="py-4 flex flex-wrap">
+
+          <div class="card bg-light-navy w-full lg:w-fit p-6 rounded-lg mr-5 mb-5">
+            <div class="row-1 flex justify-between items-center pb-10 ">
+              <div class="text-info text-white pr-8">
+                <h4 class="text-2xl font-semibold ">32<span class="text-lime">°C</span></h4>
+                <p class="text-light-gray">Cindy</p>
+              </div>
+              <img src="https://cdn.weatherapi.com/weather/64x64/night/116.png" alt="cindy cloud">
+            </div>
+            <div class="location">
+              <h3 class="text-white">Palembang</h3>
+            </div>
+          </div>
+
+          <div class="card bg-light-navy w-full lg:w-fit p-6 rounded-lg mr-5 mb-5">
+            <div class="row-1 flex justify-between items-center pb-10 ">
+              <div class="text-info text-white pr-8">
+                <h4 class="text-2xl font-semibold ">32<span class="text-lime">°C</span></h4>
+                <p class="text-light-gray">Cindy</p>
+              </div>
+              <img src="https://cdn.weatherapi.com/weather/64x64/night/116.png" alt="cindy cloud">
+            </div>
+            <div class="location">
+              <h3 class="text-white">Palembang</h3>
+            </div>
+          </div>
+
+          <div class="card bg-light-navy w-full lg:w-fit p-6 rounded-lg mr-5 mb-5">
+            <div class="row-1 flex justify-between items-center pb-10 ">
+              <div class="text-info text-white pr-8">
+                <h4 class="text-2xl font-semibold ">32<span class="text-lime">°C</span></h4>
+                <p class="text-light-gray">Cindy</p>
+              </div>
+              <img src="https://cdn.weatherapi.com/weather/64x64/night/116.png" alt="cindy cloud">
+            </div>
+            <div class="location">
+              <h3 class="text-white">Palembang</h3>
+            </div>
+          </div>
+
+          <div class="card bg-light-navy w-full lg:w-fit p-6 rounded-lg mr-5 mb-5">
+            <div class="row-1 flex justify-between items-center pb-10 ">
+              <div class="text-info text-white pr-8">
+                <h4 class="text-2xl font-semibold ">32<span class="text-lime">°C</span></h4>
+                <p class="text-light-gray">Cindy</p>
+              </div>
+              <img src="https://cdn.weatherapi.com/weather/64x64/night/116.png" alt="cindy cloud">
+            </div>
+            <div class="location">
+              <h3 class="text-white">Palembang</h3>
+            </div>
+          </div>
+
+          <div class="card bg-light-navy w-full lg:w-fit p-6 rounded-lg mr-5 mb-5">
+            <div class="row-1 flex justify-between items-center pb-10 ">
+              <div class="text-info text-white pr-8">
+                <h4 class="text-2xl font-semibold ">32<span class="text-lime">°C</span></h4>
+                <p class="text-light-gray">Cindy</p>
+              </div>
+              <img src="https://cdn.weatherapi.com/weather/64x64/night/116.png" alt="cindy cloud">
+            </div>
+            <div class="location">
+              <h3 class="text-white">Palembang</h3>
+            </div>
+          </div>
+
+
+
+        </div>
+      </main>
     </div>
+    <!-- End Left Side -->
+    <!-- Right Side -->
+    <div class="right-side bg-light-navy w-full lg:w-1/2 px-4 lg:px-28">
+      <!-- Navbar -->
+      <nav class="py-7">
+        <a href="https://github.com/elvirafimansyah/WeatherApp" target="_blank" class="text-xl font-semibold whitespace-nowrap text-white hidden lg:block float-right"  >
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github"
+            viewBox="0 0 16 16">
+            <path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+          </svg>
+        </a>
+      </nav>
+      <main class="py-10">
+        <h3 class="text-white text-2xl">Weather <span class="text-lime font-medium">Forecast</span></h3>
+      </main>
+      <!-- End Navbar -->
+      <!-- Main -->
+      <!-- End Main -->
+    </div>
+    <!-- End Right Side -->
   </div>
 </body>
 </html>
