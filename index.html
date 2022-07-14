@@ -32,6 +32,8 @@
       }
     }
   </script>
+  <script type="module" src="src/js/main.js"></script>
+
 </head>
 <body class="font-body">
   <div class="flex flex-col lg:flex-row h-full">
@@ -53,7 +55,7 @@
       <!-- End Nav -->
       <main class="py-3 flex flex-col lg:block max-w-md" >
         <div class="search-bar h-12" >
-          <input type="text" class="w-full h-full bg-light-navy rounded-lg px-12 bg-no-repeat text-light-gray focus:outline-none" placeholder="Search Location" style="background-image: url(./src/img/search.png); background-size: 1.5em; background-position: 16px 48%; ">
+          <input type="text" class="w-full h-full bg-light-navy rounded-lg px-12 bg-no-repeat text-light-gray focus:outline-none" placeholder="Search Location" style="background-image: url(./src/img/search.png); background-size: 1.5em; background-position: 16px 48%;" id="search-box">
         </div>
         <div id="main_example_card " class="py-4 flex flex-wrap">
 
@@ -127,9 +129,9 @@
     </div>
     <!-- End Left Side -->
     <!-- Right Side -->
-    <div class="right-side bg-light-navy w-full lg:w-1/2 px-4 lg:px-28">
+    <div class="right-side bg-light-navy w-full lg:w-1/2 px-4  lg:px-28">
       <!-- Navbar -->
-      <nav class="py-7">
+      <nav class="py-5 lg:py-7">
         <a href="https://github.com/elvirafimansyah/WeatherApp" target="_blank" class="text-xl font-semibold whitespace-nowrap text-white hidden lg:block float-right"  >
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github"
             viewBox="0 0 16 16">
@@ -138,10 +140,10 @@
           </svg>
         </a>
       </nav>
-      <main class="py-10 ">
+      <main class="lg:py-10 ">
         <h3 class="text-white text-2xl ">Weather <span class="text-lime font-medium">Forecast</span></h3>
         <!-- Card Details -->
-        <div class="card-details p-9 text-white rounded-lg my-5" style="background-image: url(src/img/card_details.png); background-size:cover; ">
+        <!-- <div class="card-details p-9 text-white rounded-lg my-5" style="background-image: url(src/img/card_details.png); background-size:cover; ">
           <div class="row-1 day flex justify-between items-center pb-5">
             <h3 class="text-xl font-medium">Today</h3>
             <h3 class="font-light">13/07/22 11.00</h3>
@@ -161,38 +163,52 @@
             &nbsp; 
             New York, USA
           </div>
-        </div>
+        </div> -->
+        <div id="main-details"></div>
         <!-- End Card Details -->
         <h3 class="text-white text-xl pb-5">Today Overview</h3>
 
-        <div class="box-details flex flex-wrap w-full">
-          <div class="box bg-low-navy p-7 mr-5 mb-5 flex justify-center items-center rounded-lg">
+        <div class="box-details flex flex-wrap w-full" >
+          <!-- <div class="box bg-low-navy p-7 mr-5 mb-5 flex justify-center items-center rounded-lg" id="main-wind">
             <img src="src/img/wind.png" width="38" height="38" alt="wind">
             <div class="text pl-3.5">
               <p class="text-light-gray font-light text-sm">Wind Speed</p>
               <h3 class="text-white font-semibold text-2xl">9.4/mph</h3>
             </div>
           </div>
-          <div class="box bg-low-navy p-7 mr-5 mb-5 flex justify-center items-center rounded-lg">
+          <div class="box bg-low-navy p-7 mr-5 mb-5 flex justify-center items-center rounded-lg" id="main-pressure">
             <img src="src/img/waves.png" width="38" height="38" alt="wind">
             <div class="text pl-3.5">
               <p class="text-light-gray font-light text-sm">Pressure</p>
               <h3 class="text-white font-semibold text-2xl">9.4/mph</h3>
             </div>
           </div>
-          <div class="box bg-low-navy p-7 mr-5 mb-5 flex justify-center items-center rounded-lg">
+          <div class="box bg-low-navy p-7 mr-5 mb-5 flex justify-center items-center rounded-lg" id="main-temp">
             <img src="src/img/temp.png" width="38" height="38" alt="wind">
             <div class="text pl-3.5">
               <p class="text-light-gray font-light text-sm">Feels Like</p>
               <h3 class="text-white font-semibold text-2xl">9.4/mph</h3>
             </div>
           </div>
-          <div class="box bg-low-navy p-7 mr-5 mb-5 flex justify-center items-center rounded-lg">
+          <div class="box bg-low-navy p-7 mr-5 mb-5 flex justify-center items-center rounded-lg" id="main-uv">
             <img src="src/img/uv.png" width="38" height="38" alt="wind">
             <div class="text pl-3.5">
               <p class="text-light-gray font-light text-sm">UV Index</p>
               <h3 class="text-white font-semibold text-2xl">9.4/mph</h3>
             </div>
+          </div> -->
+          
+          <div class="box bg-low-navy p-7 w-full md:w-52 lg:w-56 mr-5 mb-5 flex justify-center items-center rounded-lg" id="main-wind">
+            
+          </div>
+          <div class="box bg-low-navy p-7 w-full md:w-52 lg:w-56 mr-5 mb-5 flex justify-center items-center rounded-lg" id="main-pressure">
+          
+          </div>
+          <div class="box bg-low-navy p-7 w-full md:w-52 lg:w-56 mr-5 mb-5 flex justify-center items-center rounded-lg" id="main-temp">
+          
+          </div>
+          <div class="box bg-low-navy p-7 w-full md:w-52 lg:w-56 mr-5 mb-5 flex justify-center items-center rounded-lg" id="main-uv">
+          
           </div>
         </div>
       </main>
@@ -201,7 +217,6 @@
       <!-- End Main -->
     </div>
     <!-- End Right Side -->
-    <script src="src/js/main.js"></script>
   </div>
 </body>
 </html>
