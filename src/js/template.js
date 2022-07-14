@@ -43,7 +43,6 @@ export const pressure = weather => {
     </div>
   `
 }
-
 export const feelsCard = weather => {
   return`
     <img src="src/img/temp.png" width="38" height="38" alt="wind">
@@ -63,3 +62,38 @@ export const uvCard = weather => {
     </div>
   `
 }
+
+export const exampleCard = weather => {
+  return`
+    <div class="card bg-light-navy w-full md:w-full lg:w-52 break-words p-6 rounded-lg mr-3 mb-3  relative"> 
+      <div class="row-1 flex justify-between items-center pb-10 ">
+        <div class="text-info text-white pr-8">
+          <h4 class="text-2xl font-semibold">${weather.current.temp_c}<span class="text-lime">°C</span></h4>
+          <p class="text-light-gray">${weather.current.condition.text}</p>
+        </div>
+        <img src="${weather.current.condition.icon}"  alt="${weather.current.condition.text}">
+      </div>
+      <div class="location absolute bottom-6">
+        <h3 class="text-white">${weather.location.name}</h3>
+      </div>
+    </div>
+  `
+}
+
+export const liveCard = weather => {
+  return `
+    <div class="card bg-light-navy w-full md:w-full border border-lime lg:w-52 break-words p-6 rounded-lg mr-3 mb-3  relative"> 
+      <div class="row-1 flex justify-between items-center pb-10 ">
+        <div class="text-info text-white pr-8">
+          <h4 class="text-2xl font-semibold">${weather.current.temp_c}<span class="text-lime">°C</span></h4>
+          <p class="text-light-gray">${weather.current.condition.text}</p>
+        </div>
+        <img src="${weather.current.condition.icon}"  alt="${weather.current.condition.text}">
+      </div>
+      <div class="location absolute bottom-6">
+        <h3 class="text-white">${weather.location.name}</h3>
+      </div>
+    </div>
+  `
+}
+
