@@ -48,7 +48,7 @@ export const feelsCard = weather => {
     <img src="src/img/temp.png" width="38" height="38" alt="wind">
     <div class="text pl-4">
       <p class="text-light-gray font-light text-xs lg:text-sm">Feels Like</p>
-      <h3 class="text-white font-semibold text-xl lg:text-2xl">${weather.current.feelslike_c}°C</h3>
+      <h3 class="text-white font-semibold text-xl lg:text-2xl">${weather.current.feelslike_c.toFixed(0)}°C</h3>
     </div>
   `
 }

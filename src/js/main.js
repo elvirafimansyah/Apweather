@@ -43,22 +43,16 @@ async function liveLocation(city) {
   mainExample.innerHTML += liveCard(respData);
 }
 
+
 document.addEventListener("DOMContentLoaded", async () => {
   await liveLocation("palembang")
-  const resp = await fetch("https://restcountries.com/v3.1/all");
-  const country = await resp.json();
   
-  for(let i =0; i < country.length; i++) {
-    const arr = country[i].name.common.toLowerCase();
-    await contentData(arr)
-    console.log(arr)
-  }
+  const resp = await fetch("./data/data.json");
+  const city = await resp.json();
 
-  // for (let i =0; i < country.length; i++) {
-  //   await contentData(country[i])
-  // }
+  for (let i =0; i < city.length; i++) {
+    await contentData(city[i].city)
+  }
 
   await searchData("palembang") 
 })
-
-
