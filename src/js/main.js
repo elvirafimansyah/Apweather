@@ -18,7 +18,6 @@ search_input.addEventListener("input", async e => {
   await searchData(value);
 });
 
-
 async function searchData(city) {
   const key = "ae2ade5033e9450198d64844220502";
   const resp = await fetch("https://api.weatherapi.com/v1/current.json?key=ae2ade5033e9450198d64844220502&q=" + city + "&aqi=no");
@@ -32,7 +31,7 @@ async function searchData(city) {
     mainUV.innerHTML = uvCard(respData);
     console.log("berhasil");
   } catch(err) {
-    console.log("error", respData.error.message)
+    console.log("error: ", respData.error.message)
   }
 }
 
