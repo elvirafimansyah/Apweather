@@ -65,7 +65,7 @@ export const uvCard = weather => {
 
 export const exampleCard = weather => {
   return`
-    <div class="card bg-light-navy w-full md:w-full lg:w-52 break-words p-6 rounded-lg mr-3 mb-3  relative"> 
+    <div class="card bg-light-navy w-full w-full md:w-52 break-words p-6 rounded-lg mr-3 mb-3  relative"> 
       <div class="row-1 flex justify-between items-center pb-10 ">
         <div class="text-info text-white pr-8">
           <h4 class="text-2xl font-semibold">${weather.current.temp_c}<span class="text-lime">°C</span></h4>
@@ -82,7 +82,7 @@ export const exampleCard = weather => {
 
 export const liveCard = weather => {
   return `
-    <div class="card bg-light-navy w-full md:w-full border border-lime lg:w-52 break-words p-6 rounded-lg mr-3 mb-3  relative"> 
+    <div class="card bg-light-navy w-full  border border-lime md:w-52 break-words p-6 rounded-lg mr-3 mb-3  relative"> 
       <div class="row-1 flex justify-between items-center pb-10 ">
         <div class="text-info text-white pr-8">
           <h4 class="text-2xl font-semibold">${weather.current.temp_c}<span class="text-lime">°C</span></h4>
