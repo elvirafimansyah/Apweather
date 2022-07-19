@@ -1,4 +1,4 @@
-### Weather Forecasting | Apweather
+## Weather Forecasting | Apweather
 
 ![thumbnail](src/img/apweather.png)
 
