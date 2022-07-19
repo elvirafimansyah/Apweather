@@ -1,6 +1,6 @@
 ### Weather Forecasting | Apweather
 
-![alt text](src/img/apweather.jpg)
+![thumbnail](src/img/apweather.png)
 
 this is a weather forecasting app that is used to predict the weather and temperature of each location in the world. this app was created using vanilla javascript (no framework), and also using CSS framework, namely tailwindcss to make it easy to styling
 
